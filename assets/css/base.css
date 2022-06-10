@@ -1,0 +1,209 @@
+/* null css */
+
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+ul {
+  padding: 0;
+  margin: 0;
+}
+li {
+  list-style: none;
+}
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.2;
+  overflow-x: hidden;
+}
+html {
+  margin: 0 0 0 0;
+  max-height: 100vh;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 0.5rem;
+}
+::-moz-scrollbar {
+  width: 0.5rem;
+}
+::-moz-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 0.5rem;
+}
+
+h1 {
+  font-size: clamp(22px, 2.5vw, 48px);
+  font-family: "Merriweather", serif;
+}
+h2 {
+  font-size: clamp(20px, 2.5vw, 42px);
+  font-family: "Merriweather", serif;
+}
+h3 {
+  font-size: clamp(14px, 2.5vw, 20px);
+  font-family: "Merriweather", serif;
+}
+p {
+  font-size: clamp(16px, 0.9vw, 32px);
+}
+a {
+  font-size: clamp(16px, 0.9vw, 18px);
+}
+button {
+  border: none;
+  font-family: "Liberation_Sans_Bold";
+  color: #fff;
+  opacity: 0.8;
+  transition: all 0.3s ease-in;
+}
+button:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+@font-face {
+  font-family: "Liberation_Sans";
+  src: url("../fonts/LiberationSans-Regular.eot");
+  src: local("O"), url("../fonts/LiberationSans-Regular.woff") format("woff"),
+    url("../fonts/LiberationSans-Regular.ttf") format("truetype"),
+    url("../fonts/LiberationSans-Regular.svg") format("svg");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Liberation_Sans_Bold";
+  src: url("../fonts/LiberationSans-Bold.eot");
+  src: local("O"), url("../fonts/LiberationSans-Bold.woff") format("woff"),
+    url("../fonts/LiberationSans-Bold.ttf") format("truetype"),
+    url("../fonts/LiberationSans-Bold.svg") format("svg");
+  font-weight: 700;
+  font-style: normal;
+}
+h2 span,
+h1 span {
+  color: #0068df;
+}
+.container-fluid {
+  width: 100%;
+}
+@media screen and (min-width: 200px) {
+  .container {
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+  }
+  h2 {
+    font-family: "Merriweather", serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 120%;
+    text-transform: capitalize;
+    text-align: center;
+  }
+  h3 {
+    font-family: "Liberation_Sans_Bold";
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 140%;
+    text-align: center;
+    text-transform: capitalize;
+  }
+  p {
+    font-family: "Liberation_Sans";
+    font-size: 14px;
+    line-height: 140%;
+    text-align: center;
+  }
+}
+@media screen and (min-width: 768px) {
+  h2 {
+    font-size: 28px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .container {
+    width: 950px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 90vw;
+  }
+  h2 {
+    font-size: 32px;
+  }
+  h3 {
+    font-size: 18px;
+  }
+  p {
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .container {
+    width: 1520px;
+  }
+  h2 {
+    font-size: 40px;
+  }
+}

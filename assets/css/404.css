@@ -1,0 +1,50 @@
+.error_main {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  padding: 12rem 0;
+}
+.error_image img {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+}
+.error_main p {
+  font-style: normal;
+  font-weight: 400;
+  color: #000000;
+  margin: 1.5rem 0 3.5rem;
+}
+.error_main h1 {
+  position: relative;
+  font-style: normal;
+  font-weight: 400;
+  color: #000000;
+}
+.error_main h1::before {
+  content: '';
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -55%);
+  width: 670px;
+  height: 340px;
+  background: url('/wp-content/uploads/2022/05/404_lines.png') no-repeat;
+  background-size: contain;
+  z-index: -1;
+}
+.error_main a {
+  font-style: normal;
+  font-weight: 700;
+  text-align: center;
+  text-transform: capitalize;
+  color: #FFFFFF;
+  background: #0068DF;
+  border-radius: 1.375rem;
+  text-decoration: none;
+  padding: 1rem 4.5rem;
+  transition: .3s;
+}
+.error_main a:hover {
+  opacity: .8;
+}

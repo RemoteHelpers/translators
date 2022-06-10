@@ -1,0 +1,608 @@
+@media (max-width: 767px) {
+  .container {
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+  }
+  .info_wrap {
+    display: block;
+    width: 100%;
+  }
+  .header_image {
+    display: none;
+  }
+  .mobile_animation {
+    display: block;
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+  }
+  .mobile_animation img {
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+  }
+  .header_info {
+    width: 100%;
+    height: auto;
+    z-index: 10;
+  }
+  .logo {
+    width: 10rem;
+  }
+  header {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+  header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 4rem;
+    height: 4rem;
+  }
+  .header_info a {
+    position: absolute;
+    bottom: -1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    padding: 1rem;
+    width: 80%;
+    text-align: center;
+  }
+  .header_info h1 {
+    padding-top: 2.5rem;
+  }
+  .info_container {
+    display: block;
+    width: 100%;
+    height: auto;
+    padding: 2rem 0;
+  }
+  .services_wrapper::before {
+    display: none;
+  }
+  .services_wrapper::after {
+    display: none;
+  }
+  .service_cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 2.5rem;
+  }
+  .cards {
+    width: 90%;
+    height: 16rem;
+  }
+  .service_container {
+    width: 100%;
+  }
+  .do_cards > div {
+    width: 45%;
+    height: 11.25rem;
+  }
+  header::before {
+    content: '';
+    position: absolute;
+    bottom: -3.5rem;
+    left: -5rem;
+    transform: rotate(-10deg);
+  }
+  .slider_info::before {
+    content: '';
+    width: 25%;
+    height: 80%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .slider_info::after {
+    content: '';
+    width: 2.5rem;
+    height: 60%;
+  }
+  .slider_block {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+  }
+  .slider_info {
+    width: 100%;
+    height: auto;
+  }
+
+  .slider_info_text p {
+    margin: 1.5rem 0;
+  }
+  .slider {
+    width: 90%;
+    display: block;
+  }
+
+  .mobile_slider {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    height: auto;
+  }
+  .desktop_slider {
+    display: none;
+  }
+  .mySwiper.swiper.swiper-initialized.swiper-horizontal.swiper-pointer-events.swiper-backface-hidden:before {
+    display: none;
+  }
+  .arrows {
+    margin-top: 3.5rem;
+  }
+
+  .slider_block {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0;
+  }
+  .steps_cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 6.25rem;
+  }
+  .step_card {
+    width: 100%;
+    height: 100%;
+  }
+  .cooperation_wrapper::before {
+    display: none;
+  }
+  .benefits_wrapper {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .form_fields {
+    width: 100%;
+    margin: 0;
+  }
+  .footer_links {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: 0;
+  }
+  .footer_wrapper {
+    display: block;
+    padding-bottom: 12rem;
+  }
+  .footer_links > div:first-child {
+    margin-bottom: 1rem;
+  }
+  .privacy_policy {
+    padding-top: 1rem;
+  }
+  .form_check_block > div {
+    display: block;
+    width: 100%;
+  }
+  .custom_checkbox {
+    width: 90%;
+    margin-bottom: 1.25rem;
+  }
+  .form_check_block > div label:last-child span {
+    margin: 0;
+  }
+
+  /* mobile cards */
+  .service_cards {
+    display: none;
+  }
+
+  /* first mobile card */
+  .first_mobile_card_wrapper {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all .7s;
+  }
+  .active_card {
+    transform: rotateY(180deg);
+  }
+  .first_mobile_card {
+    backface-visibility: hidden;
+  }
+  .first_mobile_card_text {
+    transform: rotateY(180deg);
+    position: absolute;
+    backface-visibility: hidden;
+  }
+
+
+  /* second mobile card */
+  .second_mobile_card_wrapper {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all .7s;
+  }
+  .second_mobile_card {
+    backface-visibility: hidden;
+  }
+ .second_mobile_card_text {
+   transform: rotateY(180deg);
+   position: absolute;
+   backface-visibility: hidden;
+ }
+
+
+  .mobile_card_wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 2.5rem;
+    padding: 3.75rem 0;
+    perspective: 1000px;
+  }
+  .mobile_cards {
+    width: 80%;
+    height: 14rem;
+    background: #FFFFFF;
+    box-shadow: 1px 1px 30px rgba(17, 109, 220, 0.1);
+    border-radius: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .mobile_cards p {
+    padding-top: 2.5rem;
+  }
+
+  .text_cards {
+    width: 80%;
+    height: 14rem;
+    background-color: #116DDC;
+    box-shadow: 1px 1px 30px rgba(17, 109, 220, 0.1);
+    border-radius: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    padding: 0 1rem;
+  }
+
+  .benefits_image_block {
+    display: none;
+  }
+  .benefits::after {
+    display: none;
+  }
+  .benefits::before {
+    display: none;
+  }
+  .benefits_info {
+    width: 100%;
+  }
+  .benefits_card {
+    width: 45%;
+    padding: 2.125rem 0.5rem;
+  }
+  .benefits {
+    width: 100%;
+    height: 100%;
+    padding: 5rem 0 0 0;
+  }
+
+
+  .mobile_benefit_image {
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    margin: 9.75rem 0;
+  }
+  .benefits_img {
+    position: relative;
+    top: 0;
+    max-width: 100%;
+    height: 100%;
+  }
+  .benefits_img_info {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    padding: 0 2.5rem;
+    transform: translateY(-50%);
+    left: 0;
+    z-index: 1;
+    color: #fff;
+  }
+  
+  .benefits_img_info a {
+    padding: .5rem 1rem;
+    font-size: clamp(12px, 0.9vw, 18px);
+  }
+
+  .form_block {
+    padding: 3rem 0;
+  }
+  .video_wrapper {
+    width: 100%;
+    height: auto;
+  }
+
+  .candidates {
+    width: 100%;
+    padding: 3rem 0;
+  }
+  .candidates_cards {
+    width: 100%;
+    height: auto;
+  }
+  .candidate_card:nth-child(2) {
+    transform: translateY(0);
+  }
+  .candidates_cards::before,
+  .candidates_cards::after {
+    display: none;
+  }
+  .candidate_wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+  }
+  .candidate_card {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 991px) {
+  .candidate_card:nth-child(2) {
+    transform: translateY(0);
+  }
+  .candidates_cards {
+    width: 100%;
+    height: auto;
+  }
+  .candidates_cards::before,
+  .candidates_cards::after {
+    display: none;
+  }
+  .candidate_wrapper {
+    display: flex;
+    row-gap: 2rem;
+    flex-direction: column;
+  }
+  .candidate_card {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+
+
+  
+  .container {
+    width: 85%;
+    height: auto;
+    margin: 0 auto;
+  }
+  .services_wrapper::before,
+  .services_wrapper::after {
+    content: '';
+    width: 6.75rem;
+    height: 6.75rem;
+  }
+  .cards {
+    width: 45%;
+    height: 14rem;
+  }
+  .steps_cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 6.25rem;
+  }
+  .step_card {
+    width: 100%;
+    height: 100%;
+  }
+  .form_fields {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .footer_links {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: 0;
+  }
+  .footer_wrapper {
+    display: block;
+    padding-bottom: 12rem;
+  }
+  .footer_links > div:first-child {
+    margin-bottom: 1rem;
+  }
+  .benefits_img_info h4:nth-child(2) {
+    margin-top: 1.188rem;
+  }
+  .benefits_img_info h4 {
+    line-height: 1.7;
+  }
+
+  .mobile_benefit_image {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 9.75rem 0;
+  }
+  .benefits_img {
+    display: block;
+    max-width: 100%;
+    height: 100%;
+  }
+  .benefits_img img {
+    width: 100%;
+  }
+  .benefits_img_info {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    padding: 0 2.5rem;
+    transform: translateY(-50%);
+    left: 0;
+    z-index: 1;
+    color: #fff;
+  }
+  .benefits_img_info a {
+    margin-top: 1rem;
+  }
+  .benefits_wrapper {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .benefits_image_block {
+    display: none;
+  }
+  .benefits::after {
+    display: none;
+  }
+  .benefits::before {
+    display: none;
+  }
+  .benefits_info {
+    width: 100%;
+  }
+  .benefits_card {
+    width: 45%;
+  }
+  .benefits_img {
+    display: block;
+    max-width: 100%;
+    height: 100%;
+  }
+  .service_cards {
+    display: none;
+  }
+  .first_mobile_card_wrapper {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all .7s;
+  }
+  .active_card {
+    transform: rotateY(180deg);
+  }
+  .first_mobile_card {
+    backface-visibility: hidden;
+  }
+  .first_mobile_card_text {
+    transform: rotateY(180deg);
+    position: absolute;
+    backface-visibility: hidden;
+  }
+
+
+  /* second mobile card */
+  .second_mobile_card_wrapper {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all .7s;
+  }
+  .second_mobile_card {
+    backface-visibility: hidden;
+  }
+ .second_mobile_card_text {
+   transform: rotateY(180deg);
+   position: absolute;
+   backface-visibility: hidden;
+ }
+
+
+  .mobile_card_wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 2.5rem;
+    padding: 3.75rem 0;
+    perspective: 1000px;
+  }
+  .mobile_cards {
+    width: 80%;
+    height: 14rem;
+    background: #FFFFFF;
+    box-shadow: 1px 1px 30px rgba(17, 109, 220, 0.1);
+    border-radius: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .mobile_cards p {
+    padding-top: 2.5rem;
+  }
+
+  .text_cards {
+    width: 80%;
+    height: 14rem;
+    background-color: #116DDC;
+    box-shadow: 1px 1px 30px rgba(17, 109, 220, 0.1);
+    border-radius: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    padding: 0 1rem;
+  }
+}
