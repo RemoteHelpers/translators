@@ -90,10 +90,10 @@
   /* end hero-section */
   /* start services-section */
   .section-services {
-    position: relative;
+    /* position: relative; */
     padding-top: 122px;
     padding-bottom: 100px;
-    isolation: isolate;
+    /* isolation: isolate; */
   }
   .section-services .text-container h2 {
     color: var(--accent-black);
@@ -250,7 +250,7 @@
       rgba(239, 244, 248, 1) 100%
     );
     background-repeat: no-repeat;
-    background-size: 30%;
+    background-size: 120px;
     background-position-x: 30% 100%;
     border-color: #000;
   }
@@ -260,7 +260,7 @@
   .section-industries .container-fluid::before {
     content: "";
     position: absolute;
-    width: 7vw;
+    width: min(7vw, 65px);
     height: 100%;
     top: 0;
     left: 0;
@@ -279,6 +279,93 @@
   .section-industries .content-container p {
     width: 270px;
     text-align: left;
+  }
+  .section-industries .swiper {
+    margin-left: 140px;
+  }
+  .section-industries .btn-container {
+    width: calc(100vw - 140px);
+    display: flex;
+    margin: 140px;
+    margin-top: 30px;
+    justify-content: center;
+  }
+  .section-industries .btn-container button {
+    display: inline-flex;
+    align-items: center;
+    background-color: transparent;
+  }
+  .section-industries .swiper-btn-prev {
+    transform: rotate(180deg);
+    margin-right: 40px;
+  }
+  .section-industries .swiper-btn-prev.swiper-button-disabled,
+  .section-industries .swiper-btn-next.swiper-button-disabled {
+    --color1: #c8cbcd;
+  }
+  .section-industries button svg {
+    width: 50px;
+    height: 50px;
+  }
+  .section-industries .swiper .swiper-slide {
+    width: 200px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+  }
+  .section-industries .swiper .swiper-slide h3 {
+    width: 100%;
+    display: block;
+  }
+  .section-industries .swiper .swiper-slide .img-content-container {
+    position: relative;
+    display: block;
+    height: 255px;
+    margin-bottom: 20px;
+  }
+  .section-industries .swiper .swiper-slide .front-container img {
+    width: 200px;
+    height: 255px;
+  }
+  .section-industries .swiper .swiper-slide .back-container,
+  .section-industries .swiper .swiper-slide .front-container {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    overflow: hidden;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transition: transform 0.5s ease;
+  }
+  .section-industries .swiper .swiper-slide .front-container {
+    transform: perspective(600px) rotateY(0);
+  }
+  .section-industries .swiper .swiper-slide .back-container {
+    transform: perspective(600px) rotateY(180deg);
+  }
+  .section-industries .swiper .swiper-slide .back-container {
+    height: inherit;
+    display: flex;
+    align-items: center;
+    padding: 1em;
+    border-radius: 16px;
+    filter: drop-shadow(0px 16px 30px rgba(17, 109, 220, 0.1));
+    background-color: var(--accent-blue);
+    transition-property: all;
+    transition-duration: 300ms;
+    transition-timing-function: ease-out;
+    transition-delay: 200ms;
+  }
+  .section-industries .swiper .swiper-slide .back-container p {
+    text-align: left;
+    font-size: 12px;
+    color: #fff;
+  }
+  .section-industries .swiper .swiper-slide:hover .back-container {
+    transform: perspective(600px) rotateY(0);
+  }
+  .section-industries .swiper .swiper-slide:hover .front-container {
+    transform: perspective(600px) rotateY(-180deg);
   }
   /* end industries-services-section */
 }
@@ -331,6 +418,18 @@
     margin-bottom: 40px;
   }
   /* end lang-services-section */
+  /* start industries-services-section */
+  .section-industries .content-container {
+    margin-bottom: 24px;
+  }
+  .section-industries .content-container h2 {
+    width: 700px;
+  }
+  .section-industries .content-container p {
+    width: 420px;
+    padding-left: 70px;
+  }
+  /* end industries-services-section */
 }
 @media screen and (min-width: 992px) {
   /* start hero-section */
@@ -468,6 +567,48 @@
     background-position: 100% 100%;
   }
   /* end lang-services-section */
+  /* start industries-services-section */
+  .section-industries .content-container h2 {
+    width: 900px;
+    margin-bottom: 30px;
+  }
+  .section-industries .content-container p {
+    width: 600px;
+    margin-bottom: 40px;
+  }
+  .section-industries .btn-container button svg {
+    width: 65px;
+  }
+  .section-industries .swiper .swiper-slide .front-container img {
+    width: 300px;
+    height: 433px;
+  }
+  .section-industries .swiper .swiper-slide .front-container {
+    height: fit-content;
+  }
+  .section-industries .swiper .swiper-slide .img-content-container {
+    height: 433px;
+    margin-bottom: 30px;
+  }
+  .section-industries .swiper .swiper-slide h3 {
+    display: block;
+  }
+  .section-industries .swiper .swiper-slide .back-container {
+    height: 433px;
+    border-radius: 33px;
+    padding: 1.5em;
+  }
+  .section-industries .swiper .swiper-slide .back-container p {
+    font-size: 18px;
+  }
+  .section-industries .swiper .swiper-slide {
+    width: 300px;
+    height: 490px;
+  }
+  .section-industries .btn-container {
+    margin-top: 50px;
+  }
+  /* end industries-services-section */
 }
 @media screen and (min-width: 1920px) {
   /* start hero-section */
@@ -536,4 +677,49 @@
     background-size: unset;
   }
   /* end lang-services-section */
+  /* start industries-services-section */
+  .section-industries {
+    background-size: 430px;
+    padding-top: 175px;
+    padding-bottom: 175px;
+  }
+  .section-industries .section-wrapper {
+    display: flex;
+  }
+  .section-industries .content-container h2 {
+    width: 545px;
+    padding-top: 100px;
+    margin-bottom: 64px;
+  }
+  .section-industries .content-container p {
+    width: 410px;
+    padding-left: 0;
+    margin-bottom: 0;
+    margin-right: auto;
+  }
+  .section-industries .swiper .swiper-slide .img-content-container {
+    min-height: 520px;
+  }
+  .section-industries .swiper .swiper-slide .front-container img {
+    width: 360px;
+    height: 520px;
+  }
+  .section-industries .swiper .swiper-slide .back-container {
+    height: 520px;
+    border-radius: 33px;
+    padding: 1.5em;
+  }
+  .section-industries .swiper .swiper-slide {
+    width: 360px;
+    height: 590px;
+  }
+  .section-industries .btn-container {
+    position: absolute;
+    z-index: 111;
+    left: -620px;
+    bottom: 0;
+    /* margin-top: 80px; */
+    /* bottom: 100px; */
+  }
+  /* end industries-services-section */
 }

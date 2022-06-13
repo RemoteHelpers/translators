@@ -56,7 +56,13 @@ html {
 a:not([class]) {
   text-decoration-skip-ink: auto;
 }
-
+p,
+h1,
+h2,
+h3,
+h4:hover {
+  cursor: default;
+}
 /* Упрощаем работу с изображениями */
 img {
   max-width: 100%;
@@ -116,6 +122,7 @@ button {
   color: #fff;
   opacity: 0.8;
   transition: all 0.3s ease-in;
+  padding: 0;
 }
 button:hover {
   opacity: 1;
@@ -205,5 +212,8 @@ h1 span {
   }
   h2 {
     font-size: 40px;
+  }
+  h3 {
+    font-size: 24px;
   }
 }
