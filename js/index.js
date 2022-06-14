@@ -17,3 +17,18 @@ new Swiper(".swiper", {
     },
   },
 });
+
+const refs = {
+  showMoreBtn: document.querySelector(".section-team .show-more-btn"),
+  teamItems: document.querySelectorAll(".section-team .container > ul .item"),
+};
+
+refs.showMoreBtn.addEventListener("click", showMoreTeam);
+
+function showMoreTeam(e) {
+  refs.teamItems.forEach(item => item.classList.add("visible"));
+  hideBtn();
+}
+function hideBtn() {
+  refs.showMoreBtn.style.display = "none";
+}

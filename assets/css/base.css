@@ -1,5 +1,9 @@
 /* null css */
-
+:root {
+  --accent-blue: #0068df;
+  --accent-black: #333333;
+  --background: #eff4f8;
+}
 /* Указываем box sizing */
 *,
 *::before,
@@ -67,6 +71,7 @@ h4:hover {
 img {
   max-width: 100%;
   display: block;
+  margin: 0;
 }
 
 /* Указываем понятную периодичность в потоке данных у article*/
@@ -81,7 +86,13 @@ textarea,
 select {
   font: inherit;
 }
-
+input:focus,
+input:active {
+  outline: 2px solid var(--accent-blue);
+}
+input {
+  color: var(--accent-blue);
+}
 ::-webkit-scrollbar {
   width: 0.5rem;
 }
@@ -123,6 +134,7 @@ button {
   opacity: 0.8;
   transition: all 0.3s ease-in;
   padding: 0;
+  background-color: var(--accent-blue);
 }
 button:hover {
   opacity: 1;
@@ -148,7 +160,7 @@ button:hover {
 }
 h2 span,
 h1 span {
-  color: #0068df;
+  color: var(--accent-blue);
 }
 .container-fluid {
   width: 100%;
