@@ -253,8 +253,7 @@
           </div>
           <div class="movie-container">
             <video preload="metadata" class="movie" controls>
-              <source src="./assets/video/promo-fullhd.mp4" media="screen" />
-              <source src="./assets/video/promo.mp4" media="handheld" />
+              <source src="./assets/video/promo-fullhd.mp4" />
             </video>
           </div>
         </div>
@@ -639,7 +638,7 @@
             <li class="item visible">
               <picture>
                 <source
-                  src="./assets/img/team/Tanya_Sav_.png.webp"
+                  srcset="./assets/img/team/Tanya_Sav_.png.webp"
                   type="image/webp"
                 />
                 <img src="./assets/img/team/Tanya_Sav.png" alt="Tanya Sav" />
@@ -657,7 +656,7 @@
             <li class="item">
               <picture>
                 <source
-                  src="./assets/img/team/Oleksandra_But_.png.webp"
+                  srcset="./assets/img/team/Oleksandra_But_.png.webp"
                   type="image/webp"
                 />
                 <img
@@ -769,6 +768,129 @@
           </ul>
         </div>
       </section>
+      <section class="section-contact-form">
+        <div class="container">
+          <h2>
+            Don’t hesitate to delegate tasks and let your
+            <span>company flourish</span>
+          </h2>
+          <p>
+            Leave your contact details, and we'll be in touch with you soon!
+          </p>
+          <form>
+            <input type="text" required placeholder="First name" />
+            <input type="email" required placeholder="Email" />
+            <input type="tel" placeholder="Phone number" />
+            <div class="select-package-container">
+              <select name="package" id="choose-package">
+                <option value="Choose a package" disabled selected>
+                  Choose a package
+                </option>
+                <option value="Full-Time">Full-Time</option>
+                <option value="Part-Time">Part-Time</option>
+                <option value="Personal package">Personal Package</option>
+              </select>
+              <span class="custom-arrow"></span>
+            </div>
+            <div class="main-lang-container">
+              <label for="select-lang"
+                >select the language
+                <div
+                  class="select-lang-container js-target js-parent"
+                  data-name="select-lang"
+                >
+                  <span class="custom-arrow"></span>
+                  <div class="chosen-lang-container js-target">
+                    <img
+                      src="./assets/img/flags/France.png"
+                      alt="Franch"
+                      loading="lazy"
+                      data-id="0"
+                    />
+                  </div>
+                  <ul class="lang-list" data-id="list-1">
+                    <li class="lang-item">
+                      <img
+                        src="./assets/img/flags/France.png"
+                        alt="Franch"
+                        loading="lazy"
+                        data-id="0"
+                      />
+                    </li>
+                    <li class="lang-item">
+                      <img
+                        src="./assets/img/flags/Poland.png"
+                        alt="Polish"
+                        loading="lazy"
+                        data-id="1"
+                      />
+                    </li>
+                    <li class="lang-item">
+                      <img
+                        src="./assets/img/flags/Germany.png"
+                        alt="German"
+                        loading="lazy"
+                        data-id="2"
+                      />
+                    </li>
+                    <li class="lang-item">
+                      <img
+                        src="./assets/img/flags/Spain.png"
+                        alt="Spanish"
+                        loading="lazy"
+                        data-id="3"
+                      />
+                    </li>
+                  </ul>
+                </div>
+              </label>
+              <label for="translated-lang"
+                >Will be translated to
+                <div
+                  class="translated-lang-container js-target js-parent"
+                  data-name="translated-lang"
+                >
+                  <span class="custom-arrow"></span>
+                  <div class="chosen-lang-container js-target">
+                    <img
+                      src="./assets/img/flags/Ukraine.png"
+                      alt="Ukrainian"
+                      loading="lazy"
+                      data-id="4"
+                    />
+                  </div>
+                  <ul class="lang-list" data-id="list-2">
+                    <li class="lang-item">
+                      <img
+                        src="./assets/img/flags/Ukraine.png"
+                        alt="Ukrainian"
+                        loading="lazy"
+                        data-id="4"
+                      />
+                    </li>
+                    <li class="lang-item">
+                      <img
+                        src="./assets/img/flags/Great-Britain.png"
+                        alt="English"
+                        loading="lazy"
+                        data-id="5"
+                      />
+                    </li>
+                  </ul>
+                </div>
+              </label>
+            </div>
+            <label class="agreement-label">
+              <span>I accept the terms of the transfer of information</span>
+              <input type="checkbox" name="agreement" id="checkbox" required
+            /></label>
+            <button type="submit">Free consultation</button>
+          </form>
+        </div>
+      </section>
+      <div id="modal-langs">
+        <div class="modal-content"></div>
+      </div>
     </main>
   </body>
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>

@@ -7,8 +7,7 @@
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
  * @package translators
- */
-
+*/
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>

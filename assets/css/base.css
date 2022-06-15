@@ -87,7 +87,9 @@ select {
   font: inherit;
 }
 input:focus,
-input:active {
+input:active,
+select:active,
+select:focus {
   outline: 2px solid var(--accent-blue);
 }
 input {
@@ -193,6 +195,13 @@ h1 span {
     line-height: 140%;
     text-align: center;
   }
+  label,
+  input,
+  select {
+    font-family: "Liberation_Sans";
+    font-size: 14px;
+    line-height: 140%;
+  }
 }
 @media screen and (min-width: 768px) {
   h2 {
@@ -214,7 +223,10 @@ h1 span {
   h3 {
     font-size: 18px;
   }
-  p {
+  p,
+  label,
+  input,
+  select {
     font-size: 18px;
   }
 }
