@@ -21,6 +21,7 @@ new Swiper(".swiper", {
 const refs = {
   showMoreBtn: document.querySelector(".section-team .show-more-btn"),
   teamItems: document.querySelectorAll(".section-team .container > ul .item"),
+  question: document.querySelectorAll(".section-question ul .item"),
 };
 
 refs.showMoreBtn.addEventListener("click", showMoreTeam);
@@ -31,4 +32,10 @@ function showMoreTeam(e) {
 }
 function hideBtn() {
   refs.showMoreBtn.style.display = "none";
+}
+
+refs.question.forEach(item => item.addEventListener("click", showAnswer));
+
+function showAnswer(e) {
+  e.currentTarget.classList.toggle("answered");
 }
