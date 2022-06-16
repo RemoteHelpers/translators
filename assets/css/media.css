@@ -455,6 +455,11 @@
     display: flex;
     align-items: center;
   }
+  .section-popular-languages .content-container ul li img {
+    -webkit-box-shadow: 0px 0px 18px 6px rgba(189, 189, 189, 0.72);
+    box-shadow: 0px 0px 18px 6px rgba(189, 189, 189, 0.72);
+    border-radius: 4px;
+  }
   .section-popular-languages .content-container ul li .lang-container {
     display: table;
     margin-left: 14px;
@@ -470,6 +475,14 @@
   }
   .section-popular-languages .content-container ul li:nth-child(5) {
     position: relative;
+  }
+  .section-popular-languages .content-container ul li:nth-child(5)::before {
+    position: absolute;
+    content: url("../svg/cancel.svg");
+    left: -7px;
+    top: -5px;
+    color: #e23e1a;
+    z-index: 1;
   }
   .section-popular-languages .content-container ul li:nth-child(5)::after {
     position: absolute;
@@ -855,6 +868,7 @@
   .section-contact-form form .lang-list li img {
     width: 34px;
     height: 34px;
+    border-radius: 4px;
   }
   .section-contact-form form .lang-list li {
     filter: drop-shadow(1px 1px 4px rgba(0, 0, 0, 0.12));
@@ -871,7 +885,7 @@
     width: 34px;
     height: 34px;
     filter: drop-shadow(1px 1px 4px rgba(0, 0, 0, 0.12));
-    border-radius: 2px;
+    border-radius: 4px;
   }
   .section-contact-form form > input::placeholder {
     font-family: "Liberation_Sans";
