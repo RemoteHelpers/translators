@@ -198,8 +198,10 @@
     justify-content: space-between;
   }
   .section-lang-services ul li {
+    position: relative;
     width: 46%;
-    padding: 34px 22px;
+    height: 150px;
+    padding: 0;
     box-shadow: 1px 1px 30px rgba(17, 109, 220, 0.1);
     border-radius: 16px;
     transition: all ease-in-out 0.3s;
@@ -226,6 +228,57 @@
   }
   .section-lang-services ul li:nth-child(-n + 2) {
     margin-bottom: 8%;
+  }
+  .section-lang-services ul li .front-container,
+  .section-lang-services ul li .back-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transition: transform 0.5s ease;
+  }
+  .section-lang-services ul li .front-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+  }
+  .section-lang-services ul li .back-container {
+    position: absolute;
+    width: 100%;
+    inset: 0;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: inherit;
+    background-color: var(--accent-blue);
+    transition-property: all;
+    transition-duration: 300ms;
+    transition-timing-function: ease-out;
+    transition-delay: 200ms;
+  }
+  .section-lang-services ul li .back-container p {
+    font-size: 11px;
+    text-align: left;
+    color: #fff;
+    margin-bottom: 0;
+  }
+  .section-lang-services ul li .front-container {
+    transform: perspective(600px) rotateY(0);
+  }
+  .section-lang-services ul li .back-container {
+    transform: perspective(600px) rotateY(180deg);
+  }
+  .section-lang-services ul li:hover .back-container {
+    opacity: 1;
+    transform: perspective(600px) rotateY(0);
+  }
+  .section-lang-services ul li:hover .front-container {
+    opacity: 1;
+    transform: perspective(600px) rotateY(-180deg);
   }
   .section-lang-services ul li h3:hover {
     cursor: default;
@@ -1093,6 +1146,12 @@
     margin-left: auto;
     margin-bottom: 40px;
   }
+  .section-lang-services ul li .back-container {
+    padding: 2em;
+  }
+  .section-lang-services ul li .back-container p {
+    font-size: 14px;
+  }
   /* end lang-services-section */
   /* start industries-services-section */
   .section-industries .content-container {
@@ -1446,6 +1505,9 @@
     align-items: center;
     justify-content: center;
   }
+  .section-lang-services ul li .back-container p {
+    font-size: 18px;
+  }
   .section-lang-services {
     padding-bottom: 0;
   }
@@ -1719,6 +1781,9 @@
   }
   /* end additional-services-section */
   /* start footer */
+  footer::after {
+    right: 0;
+  }
   footer .logo a svg {
     width: 200px;
     height: 30px;
