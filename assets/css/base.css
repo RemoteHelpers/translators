@@ -10,6 +10,10 @@
 *::after {
   box-sizing: border-box;
 }
+::before,
+::after {
+  pointer-events: none;
+}
 
 /* Убираем внутренние отступы */
 ul[class],
@@ -167,6 +171,17 @@ h1 span {
 .container-fluid {
   width: 100%;
 }
+a {
+  text-decoration: none;
+  color: #000;
+  opacity: 0.8;
+  transition: all 0.3s ease-in;
+}
+a:hover {
+  text-decoration: underline;
+  color: var(--accent-blue);
+  opacity: 1;
+}
 @media screen and (min-width: 200px) {
   .container {
     width: 80%;
@@ -189,7 +204,8 @@ h1 span {
     text-align: center;
     text-transform: capitalize;
   }
-  p {
+  p,
+  a {
     font-family: "Liberation_Sans";
     font-size: 14px;
     line-height: 140%;
@@ -226,7 +242,8 @@ h1 span {
   p,
   label,
   input,
-  select {
+  select,
+  a {
     font-size: 18px;
   }
 }
