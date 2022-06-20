@@ -36,7 +36,14 @@ function hideBtn() {
 
 refs.question.forEach(item => item.addEventListener("click", showAnswer));
 function showAnswer(e) {
-  e.currentTarget.classList.toggle("answered");
+  if (e.currentTarget.classList.contains("answered")) {
+    e.currentTarget.classList.remove("answered");
+    return;
+  }
+  refs.question.forEach(item => {
+    if (item.classList.contains("answered")) item.classList.remove("answered");
+  });
+  e.currentTarget.classList.add("answered");
 }
 
 refs.selectInput.addEventListener("click", openSelectMenu);
