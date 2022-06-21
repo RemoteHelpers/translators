@@ -202,8 +202,14 @@
               </div>
             </div>
             <div class="input_container">
-              <input type="text" placeholder="Enter Your Email" />
-              <button type="button">Order a consultation</button>
+              <form id="hero-form">
+                <input
+                  type="email"
+                  placeholder="Enter Your Email"
+                  name="client_email"
+                />
+                <button type="submit">Order a consultation</button>
+              </form>
             </div>
           </div>
         </div>
@@ -593,7 +599,9 @@
                   <p class="words">5 000 words</p>
                   <p class="price">€300</p>
                 </div>
-                <button type="button" class="price-btn">Start now</button>
+                <a href="#section-main-form" data-package="Part-Time">
+                  <button type="button" class="price-btn">Start now</button>
+                </a>
               </div>
             </li>
             <li>
@@ -606,7 +614,9 @@
                   <p class="words">10 000 words</p>
                   <p class="price">€500</p>
                 </div>
-                <button type="button" class="price-btn">Start now</button>
+                <a href="#section-main-form" data-package="Full-Time">
+                  <button type="button" class="price-btn">Start now</button>
+                </a>
               </div>
             </li>
             <li>
@@ -617,9 +627,22 @@
                     Choose the services you are interested in and assemble your
                     own package of services!
                   </p>
-                  <input type="text" placeholder="enter your email" />
+                  <form id="package-form">
+                    <input
+                      type="name"
+                      name="client_name"
+                      placeholder="enter your name"
+                      required
+                    />
+                    <input
+                      type="email"
+                      name="client_email"
+                      placeholder="enter your email"
+                      required
+                    />
+                    <button type="submit" class="price-btn">Start now</button>
+                  </form>
                 </div>
-                <button type="button" class="price-btn">Start now</button>
               </div>
             </li>
           </ul>
@@ -812,7 +835,7 @@
           </ul>
         </div>
       </section>
-      <section class="section-contact-form">
+      <section class="section-contact-form" id="section-main-form">
         <div class="container">
           <h2>
             Don’t hesitate to delegate tasks and let your
@@ -821,10 +844,20 @@
           <p>
             Leave your contact details, and we'll be in touch with you soon!
           </p>
-          <form>
-            <input type="text" required placeholder="First name" />
-            <input type="email" required placeholder="Email" />
-            <input type="tel" placeholder="Phone number" />
+          <form id="main-form">
+            <input
+              type="text"
+              name="client_name"
+              required
+              placeholder="First name"
+            />
+            <input
+              type="email"
+              name="client_email"
+              required
+              placeholder="Email"
+            />
+            <input type="tel" name="client_phone" placeholder="Phone number" />
             <div class="select-package-container">
               <select name="package" id="choose-package">
                 <option value="Choose a package" disabled selected>
@@ -844,7 +877,7 @@
               <label for="select-lang"
                 ><span>select the language</span>
                 <div
-                  class="select-lang-container js-target js-parent"
+                  class="select-lang-container js-parent"
                   data-name="select-lang"
                 >
                   <span class="custom-arrow"></span>
@@ -895,7 +928,7 @@
               <label for="translated-lang"
                 ><span>Will be translated to</span>
                 <div
-                  class="translated-lang-container js-target js-parent"
+                  class="translated-lang-container js-parent"
                   data-name="translated-lang"
                 >
                   <span class="custom-arrow"></span>
