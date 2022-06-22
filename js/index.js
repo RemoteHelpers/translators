@@ -30,10 +30,12 @@ const refs = {
   packageForm: document.getElementById("package-form"),
   mainForm: document.getElementById("main-form"),
 };
+
 refs.anchorLinks.forEach(item => item.addEventListener("click", transferData));
 function transferData(e) {
   refs.selectPackage.value = e.currentTarget.dataset.package;
 }
+
 refs.showMoreBtn.addEventListener("click", showMoreTeam);
 function showMoreTeam(e) {
   refs.teamItems.forEach(item => item.classList.add("visible"));
@@ -42,7 +44,7 @@ function showMoreTeam(e) {
 function hideBtn() {
   refs.showMoreBtn.style.display = "none";
 }
-console.log(refs.anchorLinks);
+
 refs.question.forEach(item => item.addEventListener("click", showAnswer));
 function showAnswer(e) {
   if (e.currentTarget.classList.contains("answered")) {
@@ -119,6 +121,7 @@ function onSubmitForm(e) {
   addUserData(formData)
     .then(data => {
       console.log(data);
+      window.location.assign("./thank-you.html");
     })
     .catch(error => console.log(error.message));
   e.target.reset();
