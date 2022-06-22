@@ -1,3 +1,5 @@
+<?php
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -7,28 +9,37 @@
     <link
       rel="apple-touch-icon"
       sizes="180x180"
-      href="./assets/favicon/apple-touch-icon.png"
+      href="<?php echo get_template_directory_uri (); ?>/assets/favicon/apple-touch-icon.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="./assets/favicon/favicon-32x32.png"
+      href="<?php echo get_template_directory_uri (); ?>/assets/favicon/favicon-32x32.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="16x16"
-      href="./assets/favicon/favicon-16x16.png"
+      href="<?php echo get_template_directory_uri (); ?>/assets/favicon/favicon-16x16.png"
     />
-    <link rel="manifest" href="./assets/favicon/site.webmanifest" />
+    <link
+      rel="manifest"
+      href="<?php echo get_template_directory_uri (); ?>/assets/favicon/site.webmanifest"
+    />
     <link
       rel="mask-icon"
-      href="./assets/favicon/safari-pinned-tab.svg"
+      href="<?php echo get_template_directory_uri (); ?>/assets/favicon/safari-pinned-tab.svg"
       color="#5bbad5"
     />
-    <link rel="stylesheet" href="./assets/css/base.css" />
-    <link rel="stylesheet" href="./assets/css/media.css" />
+    <link
+      rel="stylesheet"
+      href="<?php echo get_template_directory_uri (); ?>/assets/css/base.css"
+    />
+    <link
+      rel="stylesheet"
+      href="<?php echo get_template_directory_uri (); ?>/assets/css/media.css"
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap"
       rel="stylesheet"
@@ -187,7 +198,10 @@
             </a>
           </div>
           <div class="content-container">
-            <img src="./assets/img/thank-you.png" alt="Thank you" />
+            <img
+              src="<?php echo get_template_directory_uri (); ?>/assets/img/thank-you.png"
+              alt="Thank you"
+            />
             <div class="text-container">
               <h2>Thank you <span>for leaving a request.</span></h2>
               <p>Your manager will contact you shortly</p>
